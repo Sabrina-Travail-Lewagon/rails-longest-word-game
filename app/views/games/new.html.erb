@@ -1,0 +1,14 @@
+<h1>New game</h1>
+<div class="row">
+  <ul class="list-inline">
+<% @letters.each do |letter| %>
+    <li class="list-inline-item word"><%= letter %></li>
+<% end %>
+  </ul>
+</div>
+<p>Quel est le mot le plus long que tu peux trouver ?</p>
+<form action="/score" method="POST" data-turbo="false">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <input type="text" name="word" value="<%= params[:word] %>">
+  <input type="submit">
+</form>

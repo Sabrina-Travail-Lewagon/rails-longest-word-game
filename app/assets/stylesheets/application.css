@@ -13,3 +13,9 @@
  *= require_tree .
  *= require_self
  */
+ .word{
+  padding: 10px;
+  border: 1px solid #3498DC;
+  background-color: #3498DC;
+  color: #ffffff;
+}
